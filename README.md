@@ -42,8 +42,8 @@ First add React, JQuery, `hyperloop.js` and `opal-compiler.js` to your HTML page
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
   <!-- Opal and Hyperloop -->
-  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
-  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/opal-compiler.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
 </head>
 ```
 
@@ -86,8 +86,8 @@ index.html:
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <!-- Opal and Hyperloop -->
-    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
-    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
+    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/opal-compiler.min.js"></script>
+    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
 
     <script type="text/ruby">
       class SayHello < Hyperloop::Component
