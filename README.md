@@ -1,6 +1,6 @@
 #  Hyperloop JS
 
-Client-side Hyperloop and Opal for static sites or fast prototyping, with no backend or build process needed.
+Client-side Hyperloop and Opal for static sites for fast prototyping, with no backend or build process needed.
 
 + Ruby code in your HTML pages is compiled into JavaScript on page load
 + You can work with Hyperloop Components, Stores, and Operations
