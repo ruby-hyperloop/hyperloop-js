@@ -14226,9 +14226,9 @@ if (response == null) response = nil;
           } else { throw $err; }
         }};
       if (continue_to_mounting !== false && continue_to_mounting !== nil && continue_to_mounting != null) {
-        return ($f = ($g = $scope.get('Element')['$[]']("[data-reactrb-mount]")).$each, $f.$$p = (TMP_5 = function(mount_point){var self = TMP_5.$$s || this, $h, $i, $j, TMP_6, component_name = nil, component = nil, params = nil;
+        return ($f = ($g = $scope.get('Element')['$[]']("[data-hyperloop-mount]")).$each, $f.$$p = (TMP_5 = function(mount_point){var self = TMP_5.$$s || this, $h, $i, $j, TMP_6, component_name = nil, component = nil, params = nil;
 if (mount_point == null) mount_point = nil;
-        component_name = mount_point.$attr("data-reactrb-mount");
+        component_name = mount_point.$attr("data-hyperloop-mount");
           component = nil;
           try {
             component = $scope.get('Object').$const_get(component_name)

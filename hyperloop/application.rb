@@ -46,8 +46,8 @@ Document.ready? do
       message = "Error raised during execution: #{e.message}"
       `console.error(message)`
     end if compiled_code
-    Element['[data-reactrb-mount]'].each do |mount_point|
-      component_name = mount_point.attr('data-reactrb-mount')
+    Element['[data-hyperloop-mount]'].each do |mount_point|
+      component_name = mount_point.attr('data-hyperloop-mount')
       component = nil
       begin
         component = Object.const_get(component_name)
