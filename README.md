@@ -90,11 +90,10 @@ index.html:
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
 
     <script type="text/ruby">
-      class SayHello < Hyperloop::Component
-        param :name
-        render(div) do
-          10.times do
-            h1 { "Hello #{params.name}! " }
+      class SimpleComponent < Hyperloop::Component
+        render(DIV) do
+          BUTTON { 'Push the button' }.on(:click) do
+           alert 'You did it!'
           end
         end
       end
@@ -102,9 +101,8 @@ index.html:
   </head>
 
   <body>
-    <div data-hyperloop-mount="SayHello"
-         data-name="World">
-    </div>
+  <div data-hyperloop-mount="SimpleComponent">
+  </div>
   </body>
 </html>
 ```

@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hyperloop JS Demo</title>
+    <title>Hyperloop-JS Demo</title>
 
     <!-- React and JQuery -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
@@ -16,18 +16,18 @@
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
 
     <script type="text/ruby">
-    class SimpleComponent < Hyperloop::Component
-      render(DIV) do
-        BUTTON { 'Push the button' }.on(:click) do
-         alert 'You did it!'
+      class SimpleComponent < Hyperloop::Component
+        render(DIV) do
+          BUTTON { 'Push the button' }.on(:click) do
+           alert 'You did it!'
+          end
         end
       end
-    end
     </script>
   </head>
 
   <body>
-    <div data-hyperloop-mount="SimpleComponent">
-    </div>
+  <div data-hyperloop-mount="SimpleComponent">
+  </div>
   </body>
 </html>
