@@ -36,12 +36,12 @@ First add React, JQuery, `hyperloop.js` and `opal-compiler.js` to your HTML page
 
 ```html
 <head>
-  !-- React and JQuery -->
+  <!-- React and JQuery -->
   <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
   <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-  !-- Opal and Hyperloop -->
+  <!-- Opal and Hyperloop -->
   <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
   <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
 </head>
@@ -80,12 +80,12 @@ index.html:
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Hyperloop-JS Demo</title>
 
-    !-- React and JQuery -->
+    <!-- React and JQuery -->
     <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
     <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    !-- Opal and Hyperloop -->
+    <!-- Opal and Hyperloop -->
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
 
