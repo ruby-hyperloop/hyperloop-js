@@ -1,10 +1,19 @@
 #  Hyperloop JS
 
-Client-side Hyperloop and Opal for static sites or prototyping, with no backend or build process needed. Ruby code in your HTML pages is compiled into JavaScript on page load. You can work with Hyperloop Components, Stores and Operations with no back-end dependancy or setup.
+Client-side Hyperloop and Opal for static sites or fast prototyping, with no backend or build process needed.
+
++ Ruby code in your HTML pages is compiled into JavaScript on page load
++ You can work with Hyperloop Components, Stores, and Operations
++ No backend dependency or setup required
+
+## Documentation and Help
+
++ Please see the [ruby-hyperloop.io](http://ruby-hyperloop.io/) website for documentation
++ Join the Hyperloop [gitter.io](https://gitter.im/ruby-hyperloop/chat) chat for help and support
 
 ## How it works
 
-Your ruby code will be compiled by the browser into JavaScript, and executed.  Any compilation or runtime errors will be briefly reported to the console.
+Your ruby code will be compiled by the browser into JavaScript and executed.  Any compilation or runtime errors will be briefly reported to the console.
 
 You can write any Ruby code supported by Opal and access JavaScript libraries from within your Ruby code.
 
@@ -19,113 +28,107 @@ Ruby classes can subclass `Hyperloop::Component` to become React components, `Hy
 + Hyperloop Operations (Operations dispatch messages to Stores to mutate data)
 + Hyperloop Auto Import (automatically imports JS components to Ruby)
 
-**Note** Hyperloop is dependant on React and JQuery.
+**Note** Hyperloop is dependent on React and JQuery.
 
 ## How to use
 
-1. Add React, JQuery, `hyperloop.js` and `opal-compiler.js` to your HTML page:
+First add React, JQuery, `hyperloop.js` and `opal-compiler.js` to your HTML page:
 
+```html
+<head>
+  !-- React and JQuery -->
+  <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+  <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  !-- Opal and Hyperloop -->
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
+</head>
 ```
-!-- React and JQuery -->
-<script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-!-- Opal and Hyperloop -->
-<script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
-<script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
+Next, specify your ruby code inside script tags or link to your ruby code using the src attribute `<script type="text/ruby" src=.../>`
+
+```html
+<head>
+  <script type="text/ruby">...</script>
+</head>
 ```
 
-2. Specify your ruby code inside of `<script type="text/ruby">...</script>` tags or link to your ruby code using the src attribute `<script type="text/ruby" src=.../>`
+Finally, mount your Component(s) as a DOM element and specify the Component and parameters using data- tags:
 
+```html
+<body>
+  <div data-hyperloop-mount="SayHello"
+       data-name="World">
+  </div>
+</body>
+```
+Note: For a Single Page Application (SPA) you would only mount your first (top-level) Component and that would render all subsequent Components.
 
 ## Example
 
-See this example in action here: http://hyperloop.id.github.io/hyperloop-express/
+See this example in action here: http://hyperloop.id.github.io/hyperloop-js/
 
 index.html:
-``` html
+```ruby
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Hyperloop-Express Demo</title>
+    <title>Hyperloop-JS Demo</title>
+
+    !-- React and JQuery -->
+    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-    <script src="https://rawgit.com/hyperloop.id/hyperloop-express/master/hyperloop-express.js"></script>
 
-    <!-- ruby scripts can be fetched from the server or other remote source -->
-    <script type="text/ruby" src="clock.rb"></script>
+    !-- Opal and Hyperloop -->
+    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/opal-compiler.min.js"></script>
+    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/hyperloop.min.js"></script>
 
-    <!-- or the ruby code can specified directly inline -->
     <script type="text/ruby">
-    Element['#clock'].render do
-      Clock format: 'The time is: %a, %e %b %Y %H:%M:%S %z'
-    end
+      class SayHello < Hyperloop::Component
+        param :name
+        render(div) do
+          10.times do
+            h1 { "Hello #{params.name}! " }
+          end
+        end
+      end
     </script>
-
   </head>
+
   <body>
-    <div id="clock"></div>
-    <!--
-
-    instead of using Element[...].render to attach a top level component, you
-    can specify the react component and parameters using data- tags:
-
-    <div data-reactrb-mount="Clock"
-         data-format="The time is: %a, %e %b %Y %H:%M:%S %z">
+    <div data-hyperloop-mount="SayHello"
+         data-name="World">
     </div>
-
-    -->
   </body>
 </html>
 ```
 
-```ruby
-# clock.rb:  Displays the current time
-class Clock < React::Component::Base
-  param format: '%a, %e %b %Y %H:%M'
-  before_mount do
-    state.time! Time.now.strftime(params.format)
-    every(1) { state.time! Time.now.strftime(params.format) }
-  end
+### Want a larger example?  
 
-  def render
-    state.time
-  end
-end
-```
+The Hyperloop website and [ChatRoom application and tutorial](http://ruby-hyperloop.io/tutorials/chat_app/) uses hyperloop-js.
 
-# Want a larger example?  
-
-The Hyperloop website and [ChatRoom application and tutorial](http://ruby-hyperloop.io/tutorials/chat_app/) uses Hyperloop-Express.
-
-# Trying it out using github
+### Trying it out using GitHub
 
 Github makes a great sandbox to try out small Hyperloop online with nothing but your browser.
 
 Have a look at the instructions here: https://pages.github.com/
 
-but rather than "cloning" the repo, and editing your files on your computer
-you can just create and edit files right on the github site.
+Rather than "cloning" the repo, and editing your files on your computer you can just create and edit files right on the GitHub site.
 
-# Mounting Components
+## Mounting Components
 
-In addition to the standard ways to mount top level components hyperloop-express will directly mount components onto DOM elements that have the `data-hyperloop-mount` attribute.  The attribute value should be the fully qualified name of the component.  For example "Clock".  Any additional data attributes will be passed as params to the component.  The attribute names will be snake cased (i.e. `data-foo-bar` becomes the `foo_bar` key)
+hyperloop-js will directly mount components onto DOM elements that have the `data-hyperloop-mount` attribute.  The attribute value should be the fully qualified name of the component.  For example "MyComponent".  Any additional data attributes will be passed as params to the component.  The attribute names will be snake cased (i.e. `data-foo-bar` becomes the `foo_bar` key)
 
-# Building and Contributing
+## Building and Contributing
 
 To build, clone the repo, run `bundle install` and then `bundle exec rake`
 
-This will combine all the pieces and build the `hyperloop-express.js` file.
+This will combine all the pieces and build `hyperloop.js`, `hyperloop.min.js`, `opal-compiler.js` and `opal-compiler.min.js`.
 
-To be sure we have no ruby dependencies we use this server for smoke testing:
-
-`python -m SimpleHTTPServer 4000`
-
-Contributions are welcome - things we need:
-
-+ Examples
-+ Some test cases
-+ Minimization
+Contributions are most welcome!
