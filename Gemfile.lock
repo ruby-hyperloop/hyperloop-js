@@ -75,7 +75,7 @@ GEM
       hyperloop-config (>= 0.9.2)
       opal-rails (~> 0.9.0)
       react-rails (< 1.10.0)
-    hyper-operation (0.5.0)
+    hyper-operation (0.5.2)
       activerecord (>= 0.3.0)
       hyper-component (>= 0.12.2)
       hyperloop-config (>= 0.9.2)
@@ -83,15 +83,16 @@ GEM
       opal-activesupport
       pusher
       pusher-fake
-    hyper-react (0.12.3)
+    hyper-react (0.12.4)
       hyper-store (>= 0.2.1)
       hyperloop-config (>= 0.9.2)
       opal (>= 0.8.0)
       opal-activesupport (>= 0.2.0)
     hyper-store (0.2.1)
       hyperloop-config (>= 0.9.2)
-    hyperloop-config (0.9.2)
+    hyperloop-config (0.9.4)
       opal
+      opal-browser
     i18n (0.8.1)
     jquery-rails (4.3.1)
       rails-dom-testing (>= 1, < 3)
