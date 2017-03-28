@@ -24,13 +24,13 @@
             H1 { "Components, Stores and Operations" }
             P { "A few examples using Hyperloop Components which wrap React, Stores to hold state which is shared between Components and an Operation for mutating the Store's state. Finally, a Clock which demonstrates local state and a callback which triggers every second." }
             TypeAlong()
-            ButtonComponent()
+            Buttons()
             Clock()
           end
         end
       end
 
-      class ButtonComponent < Hyperloop::Component
+      class Buttons < Hyperloop::Component
         render(DIV) do
           H2 { "Here is a button" }
           BUTTON { 'See the value' }.on(:click) do
