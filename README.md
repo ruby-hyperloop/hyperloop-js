@@ -30,7 +30,7 @@ Ruby classes can subclass `Hyperloop::Component` to become React components, `Hy
 
 **Note** Hyperloop is dependent on React and JQuery.
 
-See [VERSIONS](https://github.com/ruby-hyperloop/hyperloop-js/blob/master/VERSIONS.md) for the version numbers of the included Gems. 
+See [VERSIONS](https://github.com/ruby-hyperloop/hyperloop-js/blob/master/VERSIONS.md) for the version numbers of the included Gems.
 
 ## How to use
 
