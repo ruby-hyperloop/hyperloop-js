@@ -19,27 +19,11 @@
       class TopLevelComponent < Hyperloop::Component
         render(DIV) do
           H1 { "Components, Stores and Operations" }
+          P { "A few examples using Hyperloop Components which wrap React, Stores to hold state which is shared between Components and an Operation for mutating the Store's state. Finally, a Clock which demonstrates local state and a callback which triggers every second." }
           TypeAlong()
           ButtonComponent()
           Clock()
         end
-      end
-
-      class MyStore < Hyperloop::Store
-        state :value, reader: true, scope: :class
-
-        def self.set_value value
-          mutate.value value
-        end
-
-        def self.clear
-          mutate.value ""
-        end
-      end
-
-      class ClearOp < Hyperloop::Operation
-        step { puts "about to clear everything" }
-        step { MyStore.clear }
       end
 
       class ButtonComponent < Hyperloop::Component
@@ -67,12 +51,27 @@
           mutate.time Time.now.strftime(params.format)
           every(1) { mutate.time Time.now.strftime(params.format) }
         end
-
         render(DIV) do
           H2 { "And a clock" }
           "The time is #{state.time}"
         end
       end
+
+      class MyStore < Hyperloop::Store
+        state :value, reader: true, scope: :class
+        def self.set_value value
+          mutate.value value
+        end
+        def self.clear
+          mutate.value ""
+        end
+      end
+
+      class ClearOp < Hyperloop::Operation
+        step { puts "about to clear everything" }
+        step { MyStore.clear }
+      end
+
     </script>
 
   </head>
