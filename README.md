@@ -30,6 +30,8 @@ Ruby classes can subclass `Hyperloop::Component` to become React components, `Hy
 
 **Note** Hyperloop is dependent on React and JQuery.
 
+See [VERSIONS](https://github.com/ruby-hyperloop/hyperloop-js/blob/master/VERSIONS.md) for the version numbers of the included Gems. 
+
 ## How to use
 
 First add React, JQuery, `hyperloop.js` and `opal-compiler.js` to your HTML page:
@@ -68,9 +70,9 @@ Note: For a Single Page Application (SPA) you would only mount your first (top-l
 
 ## Example
 
-See this example in action here: http://hyperloop.id.github.io/hyperloop-js/
+There is a live demo page here (index.html in this repo): [https://ruby-hyperloop.github.io/hyperloop-js/](https://ruby-hyperloop.github.io/hyperloop-js/)
 
-index.html:
+Here is a simple index.html:
 ```ruby
 <!DOCTYPE html>
 <!--[if IE]><![endif]-->
@@ -109,7 +111,7 @@ index.html:
 
 ### Want a larger example?  
 
-The Hyperloop website and [ChatRoom application and tutorial](http://ruby-hyperloop.io/tutorials/chat_app/) uses hyperloop-js.
+The [Hyperloop website](http://ruby-hyperloop.io/) and [ChatRoom application and tutorial](http://ruby-hyperloop.io/tutorials/chat_app/) uses hyperloop-js.
 
 ### Trying it out using GitHub
 
