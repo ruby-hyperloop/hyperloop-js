@@ -15,14 +15,18 @@
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/opal-compiler.min.js"></script>
     <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
 
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
     <script type="text/ruby">
       class TopLevelComponent < Hyperloop::Component
         render(DIV) do
-          H1 { "Components, Stores and Operations" }
-          P { "A few examples using Hyperloop Components which wrap React, Stores to hold state which is shared between Components and an Operation for mutating the Store's state. Finally, a Clock which demonstrates local state and a callback which triggers every second." }
-          TypeAlong()
-          ButtonComponent()
-          Clock()
+          div.container do
+            H1 { "Components, Stores and Operations" }
+            P { "A few examples using Hyperloop Components which wrap React, Stores to hold state which is shared between Components and an Operation for mutating the Store's state. Finally, a Clock which demonstrates local state and a callback which triggers every second." }
+            TypeAlong()
+            ButtonComponent()
+            Clock()
+          end
         end
       end
 
