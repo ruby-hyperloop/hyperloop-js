@@ -26,17 +26,16 @@
             TypeAlong()
             Buttons()
             Clock()
+            StylishTable()
           end
         end
       end
 
       class Buttons < Hyperloop::Component
         render(DIV) do
-          H2 { "Here is a button" }
-          BUTTON { 'See the value' }.on(:click) do
-           alert "MyStore value is '#{ MyStore.value }' "
-          end
-          BUTTON { 'Clear' }.on(:click) { ClearOp.run }
+          H2 { "Some buttons" }
+          BUTTON(class: 'btn btn-primary') { 'See the value' }.on(:click) { alert "MyStore value is '#{ MyStore.value }'" }
+          BUTTON(class: 'btn btn-link') { 'Clear' }.on(:click) { ClearOp.run }
         end
       end
 
@@ -75,6 +74,28 @@
         step { puts "about to clear everything" }
         step { MyStore.clear }
       end
+
+      class StylishTable < Hyperloop::Component
+      render(DIV) do
+      H2 { "A stylish table" }
+        table.table.table_bordered do
+          thead do
+            tr do
+              th { "First Name" }
+              th { "Last Name" }
+              th { "Username" }
+            end
+          end
+          tbody do
+            tr do
+              td { "Mark" }
+              td { "Otto" }
+              td.text_success { MyStore.value }
+            end
+          end
+        end
+      end
+    end
 
     </script>
 
