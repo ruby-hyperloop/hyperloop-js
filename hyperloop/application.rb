@@ -10,6 +10,7 @@ module Hyperloop
     VERSION = "0.12.4"
   end
 end
+require 'hyper-component'
 require 'hyper-operation'
 require 'hyper-store'
 require 'react/top_level_render'
