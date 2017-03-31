@@ -109,6 +109,8 @@ Here is a simple index.html:
 </html>
 ```
 
+Copy the code above into an `index.html` file and launch a simple web server with `ruby -run -e httpd . -p 8000` then navigate to  http://localhost:8000/
+
 ### Want a larger example?  
 
 The [Hyperloop website](http://ruby-hyperloop.io/) and [ChatRoom application and tutorial](http://ruby-hyperloop.io/tutorials/chat_app/) uses hyperloop-js.

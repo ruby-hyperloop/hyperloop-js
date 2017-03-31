@@ -5,6 +5,7 @@
 require 'browser/interval'
 require 'browser/delay'
 require 'opal-jquery'
+require 'reactrb/auto-import'
 module Hyperloop
   class Component
     VERSION = "0.12.4"
