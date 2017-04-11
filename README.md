@@ -109,7 +109,7 @@ Here is a simple index.html:
 </html>
 ```
 
-Copy the code above into an `index.html` file and launch a simple web server with `ruby -run -e httpd . -p 8000` then navigate to  http://localhost:8000/
+Copy the code above into an `index.html` file and launch a simple web server with `ruby -run -e httpd . -p 8000` (or if you prefer Python) `python -m SimpleHTTPServer` then navigate to  http://localhost:8000/
 
 ### Want a larger example?  
 
