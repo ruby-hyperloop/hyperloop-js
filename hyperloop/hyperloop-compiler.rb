@@ -1,21 +1,4 @@
-# require 'opal'
-# require 'opal/compiler'
-# require 'browser'
-# require 'browser/socket'
-require 'browser/interval'
-require 'browser/delay'
-require 'opal-jquery'
-require 'reactrb/auto-import'
-module Hyperloop
-  class Component
-    VERSION = "0.12.4"
-  end
-end
-require 'hyper-component'
-require 'hyper-operation'
-require 'hyper-store'
-require 'react/top_level_render'
-# require 'react/react-source-browser'
+require 'opal/compiler'
 
 Document.ready? do
   # rubocop:disable Lint/RescueException
