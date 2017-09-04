@@ -11,6 +11,5 @@ module Hyperloop
 end
 require 'hyper-component'
 require 'hyper-operation'
-# require 'hyper-router'
 require 'hyper-store'
 require 'react/top_level_render'

@@ -1,5 +1,7 @@
 #  Hyperloop JS
 
+TODO: Docs about router
+
 ### Hyperloop.js
 
 Hyperloop client-side including:
