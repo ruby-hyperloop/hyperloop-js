@@ -3,6 +3,7 @@ require 'active_support'
 require 'browser/interval'
 require 'browser/delay'
 require 'opal-jquery'
+require 'react/top_level_render'
 
 module Hyperloop
   class Component
