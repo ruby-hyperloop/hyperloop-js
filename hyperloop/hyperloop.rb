@@ -10,12 +10,8 @@ module Hyperloop
   end
 end
 
-# following to stop HyperRouter complaining
-`if( eval(ReactRouter) == 'undefined') { ReactRouter = function() {} };`
-`if( eval(ReactRouterDOM) == 'undefined') { ReactRouterDOM = function() {} };`
-
 require 'hyper-component'
 require 'hyper-operation'
 require 'hyper-store'
-require 'hyper-router'
+# require 'hyper-router'
 require 'react/top_level_render'

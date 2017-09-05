@@ -1,4 +1,4 @@
-# require 'opal'
+require 'opal'
 
 # require 'active_support'
 # require 'browser/interval'

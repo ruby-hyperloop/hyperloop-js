@@ -24,9 +24,9 @@ task :build do
   # File.binwrite 'hyper-router.js', Opal::Builder.build('hyper-router').to_s
   # puts "done"
 
-  # puts "About to build opal.js"
-  # File.binwrite 'opal.js', Opal::Builder.build('opal').to_s
-  # puts "done"
+  puts "About to build opal.js"
+  File.binwrite 'opal.js', Opal::Builder.build('opal').to_s
+  puts "done"
 end
 
 desc 'Minify using uglifier gem'
@@ -52,10 +52,10 @@ task :minify do
   # File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
   # puts "done"
 
-  # puts "About to build opal.min.js"
-  # js_file = "opal.js"
-  # js_min_file = "./dist/opal.min.js"
-  # File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
-  # puts "done"
+  puts "About to build opal.min.js"
+  js_file = "opal.js"
+  js_min_file = "./dist/opal.min.js"
+  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  puts "done"
 end
 task default: [:build, :minify]
