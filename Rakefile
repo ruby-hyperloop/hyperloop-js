@@ -20,9 +20,9 @@ task :build do
   File.binwrite 'hyperloop-compiler.js', Opal::Builder.build('hyperloop-compiler').to_s
   puts "done"
 
-  puts "About to build hyper-router.js"
-  File.binwrite 'hyper-router.js', Opal::Builder.build('hyper-router').to_s
-  puts "done"
+  # puts "About to build hyper-router.js"
+  # File.binwrite 'hyper-router.js', Opal::Builder.build('hyper-router').to_s
+  # puts "done"
 
   # puts "About to build opal.js"
   # File.binwrite 'opal.js', Opal::Builder.build('opal').to_s
@@ -46,11 +46,11 @@ task :minify do
   File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
   puts "done"
 
-  puts "About to build hyper-router.min.js"
-  js_file = "hyper-router.js"
-  js_min_file = "./dist/hyper-router.min.js"
-  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
-  puts "done"
+  # puts "About to build hyper-router.min.js"
+  # js_file = "hyper-router.js"
+  # js_min_file = "./dist/hyper-router.min.js"
+  # File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  # puts "done"
 
   # puts "About to build opal.min.js"
   # js_file = "opal.js"
