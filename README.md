@@ -1,7 +1,5 @@
 #  Hyperloop JS
 
-TODO: Docs about router
-
 ### Hyperloop.js
 
 Hyperloop client-side including:
@@ -22,9 +20,9 @@ Compiles code in your browser. Client-side Hyperloop and Opal for static sites o
 + You can work with Hyperloop Components, Stores, Operations and HyperRouter
 + No backend dependency or setup required
 
-<!-- ### Opal.js
+### Hyper-router.js
 
-+ Latest build of Opal. Include this file or bring your own. -->
+Ruby DSL wrapper of React Router V4. Requires ReactRouter and ReactRouterDOM.
 
 ## Documentation and Help
 
@@ -35,31 +33,37 @@ See [VERSIONS](https://github.com/ruby-hyperloop/hyperloop-js/blob/master/VERSIO
 
 ## How it works
 
-#### Hyperloop.js
-
 ##### Front-end
 
-Hyperloop-js includes Hyperloop's client side Components, Operations, Stores and Hyper-Router.
++ Hyperloop.js includes Hyperloop's client side Components, Operations and Stores.
++ Hyperloop-compiler.js includes Opal Compiler for compiling Ruby Hyperloop code in your browser.
++ Hyper-router includes a client-side build of the Hyper-router gem
 
-##### Back-end
+##### No back-end (compile Ruby code in your browser)
 
-You will need a backend to build the Hyperloop code you write.
+If you do not want a backend then you can use Hyperloop-compiler.js to compile code in your browser. Your ruby code will be compiled by the browser into JavaScript and executed.  Any compilation or runtime errors will be briefly reported to the console.
 
-+ Hyperloop Gem for Rails integration
-+ Opal Sprockets for Rack backend
-+ Simple Opal Rake rask
 
-See Installation options on http://ruby-hyperloop.io/
+##### Back-end (compile Ruby code on the server)
 
-##### No back-end
+To compile your code server-side, you will need a backend integrated with Opal. Your choices are:
 
-If you do not want a backend then you can use Hyperloop-compiler.js to compile code in your browser.
++ Hyperloop Gem for Rails integration (including Isomprphic Models & Operations)
++ Opal Sprockets for Rack backend for a simple build process
++ Minimal Rake task to compile with Opal
++ Node.js using Webpack to compile Opal code
 
-#### Hyperloop-Compiler.js
-
-Your ruby code will be compiled by the browser into JavaScript and executed.  Any compilation or runtime errors will be briefly reported to the console.
+See all the installation options on http://ruby-hyperloop.io/
 
 ## How to use
+
+The simplest way to install is with NPM.
+
+```
+npm install hyperloop-js --save
+```
+
+TODO: requires and how they work....
 
 ### Hyperloop-JS
 

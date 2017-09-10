@@ -1,0 +1,24 @@
+{
+  "name": "hyperloop-js",
+  "version": "1.0.0",
+  "description": "Ruby Hyperloop client-side components",
+  "main": "./dist/hyperloop.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruby-hyperloop/hyperloop-js.git"
+  },
+  "keywords": [
+    "ruby",
+    "compiler",
+    "opal"
+  ],
+  "author": "Ruby Hyperloop team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruby-hyperloop/hyperloop-js/issues"
+  },
+  "homepage": "http://ruby-hyperloop.io/"
+}
