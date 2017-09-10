@@ -14997,7 +14997,7 @@ Opal.modules["react/top_level_render"] = function(Opal) {
 (function(Opal) {
   var self = Opal.top, $scope = Opal, nil = Opal.nil, $breaker = Opal.breaker, $slice = Opal.slice, $module = Opal.module, $klass = Opal.klass, $hash2 = Opal.hash2;
 
-  Opal.add_stubs(['$require', '$[]=', '$[]', '$states', '$new', '$after', '$structure_check', '$each', '$set_state2', '$key?', '$current_observers', '$update_react_js_state', '$==']);
+  Opal.add_stubs(['$require', '$[]=', '$[]', '$states', '$new', '$after', '$each', '$set_state2', '$key?', '$current_observers', '$update_react_js_state', '$==']);
   self.$require("reactrb/auto-import");
   self.$require("active_support");
   self.$require("browser/interval");
@@ -15051,8 +15051,7 @@ if (h == null) h = nil;if (k == null) k = nil;
           ((($a = self.delayed_updater) !== false && $a !== nil && $a != null) ? $a : self.delayed_updater = ($b = ($d = self).$after, $b.$$p = (TMP_2 = function(){var self = TMP_2.$$s || this, $e, $f, TMP_3, $g, TMP_4, $h, TMP_5, $i, TMP_7, delayed_updates = nil, updates = nil;
             if (self.delayed_updates == null) self.delayed_updates = nil;
 
-          self.$structure_check("delayed set state");
-            delayed_updates = self.delayed_updates;
+          delayed_updates = self.delayed_updates;
             self.delayed_updates = ($e = ($f = $scope.get('Hash')).$new, $e.$$p = (TMP_3 = function(h, k){var self = TMP_3.$$s || this;
 if (h == null) h = nil;if (k == null) k = nil;
             return h['$[]='](k, $hash2([], {}))}, TMP_3.$$s = self, TMP_3.$$arity = 2, TMP_3), $e).call($f);

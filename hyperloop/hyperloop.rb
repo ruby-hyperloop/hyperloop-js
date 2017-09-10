@@ -26,7 +26,7 @@ module React
         @delayed_updates ||= Hash.new { |h, k| h[k] = {} }
         @delayed_updates[object][name] = [value, Set.new]
         @delayed_updater ||= after(0.001) do
-          structure_check('delayed set state')
+          # structure_check('delayed set state')
           delayed_updates = @delayed_updates
           @delayed_updates = Hash.new { |h, k| h[k] = {} }
           @delayed_updater = nil
