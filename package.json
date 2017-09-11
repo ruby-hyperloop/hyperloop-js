@@ -1,6 +1,6 @@
 {
-  "name": "hyperloop-js",
-  "version": "1.0.0",
+  "name": "ruby-hyperloop",
+  "version": "0.0.3",
   "description": "Ruby Hyperloop client-side components",
   "main": "./dist/hyperloop.js",
   "scripts": {
@@ -20,5 +20,9 @@
   "bugs": {
     "url": "https://github.com/ruby-hyperloop/hyperloop-js/issues"
   },
-  "homepage": "http://ruby-hyperloop.io/"
+  "homepage": "http://ruby-hyperloop.io/",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-router-dom": "^4.2.2"
+  }
 }

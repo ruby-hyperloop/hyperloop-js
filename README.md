@@ -1,4 +1,4 @@
-#  Hyperloop JS
+#  Ruby Hyperloop
 
 ### Hyperloop.js
 
@@ -57,17 +57,39 @@ See all the installation options on http://ruby-hyperloop.io/
 
 ## How to use
 
+### Hyperloop Components, Operations, Stores, and Router
+
 The simplest way to install is with NPM.
 
 ```
-npm install hyperloop-js --save
+npm install ruby-hyperloop --save
 ```
 
-TODO: requires and how they work....
+Then include the libraries in your Webpack script:
 
-### Hyperloop-JS
+```javascript
+// following needed before hyperloop-js
+ReactDOM = require('react-dom');
+React = require('react');
+createReactClass = require('create-react-class');
 
-Add the following to your HTML page:
+// following needed before hyper-router (if you are using ReactRouter)
+ReactRouter = require('react-router');
+ReactRouterDOM = require('react-router-dom');
+History = require('history');
+
+// Jquery and Opal
+$ = require("jquery");
+require('ruby-hyperloop/opal');
+
+// Hyperloop Components, Stores and Operations
+require('ruby-hyperloop/hyperloop');
+
+// Hyper-router if you are using ReactRouter
+require('ruby-hyperloop/hyper-router');
+```
+
+If you are not using NPM/Webpack then you will need to bring in Hyperloop-JS in your HTML page:
 
 ```html
 <head>
@@ -87,13 +109,21 @@ Add the following to your HTML page:
 </head>
 ```
 
-That is all you need for Hyperloop Components, Stores, Operations and Router client-side. If you have a back-end building Hyperloop code you are good to go.
+**That is all you need for Hyperloop Components, Stores, Operations and Router client-side. If you have a back-end building Hyperloop code you are good to go!**
 
-If you want to do in browser compiling then follow the next step.
+### Hyperloop Compiler
 
-### Hyperloop-compiler
+If you do not have a back-end and you want to compile your Hyperloop code in your browser then follow this step.
 
-Complete the Hyperloop-JS step above then add the following to your HTML page:
+#### Setup
+
+After completing the steps above, add the following to your Webpack script:
+
+```javascript
+require('ruby-hyperloop/hyperloop-compiler');
+```
+
+Or add the following to your HTML page:
 
 ```html
 <head>
@@ -101,6 +131,8 @@ Complete the Hyperloop-JS step above then add the following to your HTML page:
   <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/refactor/dist/hyperloop-compiler.min.js"></script>
 </head>
 ```
+
+#### Usage
 
 Specify your ruby code inside script tags or link to your ruby code using the src attribute `<script type="text/ruby" src=.../>`
 
