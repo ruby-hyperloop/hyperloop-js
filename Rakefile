@@ -37,25 +37,25 @@ task :minify do
   puts "About to build hyperloop.min.js"
   js_file = "hyperloop.js"
   js_min_file = "./dist/hyperloop.min.js"
-  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  File.open(js_min_file, "w").write(Uglifier.new(harmony: true).compile(File.read(js_file)))
   puts "done"
 
   puts "About to build hyperloop-compiler.min.js"
   js_file = "hyperloop-compiler.js"
   js_min_file = "./dist/hyperloop-compiler.min.js"
-  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  File.open(js_min_file, "w").write(Uglifier.new(harmony: true).compile(File.read(js_file)))
   puts "done"
 
   puts "About to build hyper-router.min.js"
   js_file = "hyper-router.js"
   js_min_file = "./dist/hyper-router.min.js"
-  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  File.open(js_min_file, "w").write(Uglifier.new(harmony: true).compile(File.read(js_file)))
   puts "done"
 
   puts "About to build opal.min.js"
   js_file = "opal.js"
   js_min_file = "./dist/opal.min.js"
-  File.open(js_min_file, "w").write(Uglifier.new.compile(File.read(js_file)))
+  File.open(js_min_file, "w").write(Uglifier.new(harmony: true).compile(File.read(js_file)))
   puts "done"
 end
 task default: [:build, :minify]

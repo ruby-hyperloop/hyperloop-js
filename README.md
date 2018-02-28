@@ -168,13 +168,16 @@ Here is a simple index.html:
     <title>Hyperloop-JS Demo</title>
 
     <!-- React and JQuery -->
-    <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-    <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 
-    <!-- Opal and Hyperloop -->
-    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/opal-compiler.min.js"></script>
-    <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/hyperloop.min.js"></script>
+    <!-- Opal (or bring your own) -->
+    <script src="dist/opal.min.js"></script>
+
+    <!--Hyperloop -->
+    <script src="dist/hyperloop.min.js"></script>
+    <script src="dist/hyperloop-compiler.min.js"></script>
 
     <script type="text/ruby">
       class SimpleComponent < Hyperloop::Component
@@ -217,5 +220,7 @@ hyperloop-js will directly mount components onto DOM elements that have the `dat
 To build, clone the repo, run `bundle install` and then `bundle exec rake`
 
 This will combine all the pieces and build `hyperloop.js`, `hyperloop.min.js`, `opal-compiler.js` and `opal-compiler.min.js`.
+
+Publish to NPM `npm publish`
 
 Contributions are most welcome!

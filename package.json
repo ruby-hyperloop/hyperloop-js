@@ -1,6 +1,6 @@
 {
   "name": "ruby-hyperloop",
-  "version": "0.0.3",
+  "version": "0.0.24",
   "description": "Ruby Hyperloop client-side components",
   "main": "./dist/hyperloop.js",
   "scripts": {
