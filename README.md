@@ -105,7 +105,7 @@ If you are not using NPM/Webpack then you will need to bring in Hyperloop-JS in 
   <script src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
 
   <!-- Hyperloop-js -->
-  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/refactor/dist/hyperloop.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/edge/dist/hyperloop.min.js"></script>
 </head>
 ```
 
