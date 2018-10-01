@@ -102,10 +102,10 @@ If you are not using NPM/Webpack then you will need to bring in Hyperloop-JS in 
   <script src="https://unpkg.com/react-router/umd/react-router.min.js"></script>
 
   <!-- Opal (or bring your own) -->
-  <script src="http://cdn.opalrb.org/opal/current/opal.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/dist/opal.min.js"></script>
 
   <!-- Hyperloop-js -->
-  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/edge/dist/hyperloop.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/dist/hyperloop.min.js"></script>
 </head>
 ```
 
@@ -128,7 +128,7 @@ Or add the following to your HTML page:
 ```html
 <head>
   <!-- Hyperloop-compiler (only needed if you are doing in browser compiling) -->
-  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/refactor/dist/hyperloop-compiler.min.js"></script>
+  <script src="https://rawgit.com/ruby-hyperloop/hyperloop-js/master/dist/hyperloop-compiler.min.js"></script>
 </head>
 ```
 
